@@ -41,8 +41,10 @@ function App() {
         </ul>
       </div>
       <div className ="ex2 wrapper">
-          {favoriteFoods.map((food) => (
-            <p key={food}>{food}</p>
+        {favoriteFoods.map((food) => (
+          <div key={food}>
+          <p>{food}</p>
+          </div>
           ))}
       </div>
       <div className ="ex3 wrapper">
@@ -59,19 +61,19 @@ function App() {
       </div>
       <div className="ex5 wrapper">
         {cities.map((city) => (
-          <p style={{textTransform: 'capitalize'}}>{city}</p>
+          <p key={city} style={{textTransform: 'capitalize'}}>{city}</p>
         ))}
       </div>
       <div className ="ex6 wrapper">
         {colors.map((color) => (
-          <button style={{background: color}}>
+          <button key={color} style={{background: color}}>
             {color}
           </button>
         ))}
       </div>
       <div className ="ex7 wrapper">
         {books.map((book) => (
-          <h3>
+          <h3 key={book}>
             {book}
           </h3>
         ))}
